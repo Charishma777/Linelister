@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <style>
+        /* Add some basic styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: lightblue url("blue.jpg");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+            background-size: cover;
+        }
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            resize: none;
+        }
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            border: none;
+            border-radius: 4px;
+            color: #fff;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+        .edit-profile-btn {
+            background-color: #ffc107;
+            color: #000;
+            padding: 8px 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-bottom: 20px;
+        }
+        .edit-profile-btn:hover {
+            background-color: #ffca28;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Profile</h2>
+        <button class="edit-profile-btn" onclick="enableEditing()">Edit Profile</button>
+        <form id="profileForm" action="#" method="post">
+            <label for="fullname">Full Name:</label>
+            <input type="text" id="fullname" name="fullname" placeholder="John Doe" readonly>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="john@example.com" readonly>
+            
+            <label for="bio">Bio:</label>
+            <textarea id="bio" name="bio" rows="4" readonly>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</textarea>
+            
+            <input type="submit" value="Update Profile" style="display: none;">
+        </form>
+    </div>
+
+    <script>
+        function enableEditing() {
+            var inputs = document.getElementsByTagName("input");
+            for (var i = 0; i < inputs.length; i++) {
+                inputs[i].removeAttribute("readonly");
+            }
+            document.getElementById("bio").removeAttribute("readonly");
+            document.querySelector(".edit-profile-btn").style.display = "none";
+            document.querySelector("input[type='submit']").style.display = "block";
+        }
+    </script>
+</body>
+</html>

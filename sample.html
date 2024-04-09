@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<head>
+    <title>Todo List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Todo List</h1>
+        <input type="text" id="taskInput" placeholder="Enter a task..."><br><br>
+        <input type="datetime-local" id="reminderInput"> <br><br><!-- New input field for setting reminder -->
+        <button onclick="addTask()">Add Task</button>
+        <ul id="tasks"></ul>
+    </div>
+
+    <script>
+        function addTask() {
+            var taskInput = document.getElementById("taskInput").value;
+            var taskText = taskInput.value.trim();
+            if (taskText === "") return;
+        
+            var li = document.createElement("li");
+            li.textContent = taskText;
+        
+            var deleteButton = document.createElement("button");
+            deleteButton.textContent = "Delete";
+            deleteButton.onclick = function() {
+                li.remove();
+            };
+            li.appendChild(deleteButton);
+        
+            var completeButton = document.createElement("button");
+            completeButton.textContent = "Complete";
+            completeButton.onclick = function() {
+                li.style.textDecoration = "line-through";
+            };
+            li.appendChild(completeButton);
+        
+            document.getElementById("taskList").appendChild(li);
+            taskInput.value = "";
+        }
+    </script>
+</body>
+</html>
+

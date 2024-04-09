@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<head>
+    <title>Lineup List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body >
+    <header>
+        <div class="container">
+            <div class="col6">
+                <img src="logo.png" alt="Logo" class="logo">
+                <div class="search-container">
+                <div class="input-box">
+                    <input type="text" id="searchInput" placeholder="Search for task" />
+                    
+                    <button id="searchButton" onclick="search()">Search</button>
+                    
+                </div>
+            </div>
+            </div>
+            <div class="col6">
+                <ul class="topnav">                   
+                    <li><a href="help.html">Help</a></li>
+                    <li><a href="profile.html">Profile</a></li>
+                    <li><a href="signin.html">Signin</a></li>
+                    <li><button class="btn-r" id="register">Register</button></li>
+                </ul>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+
+        <div class="header-bottom">
+            <nav class="navbar">
+                <div class="container">
+                    <div class="navbar-container">
+                    <ul class="bottomnav">
+                        <ul class="nav-links">
+                            <li><a href="web.html">Home</a></li>
+                            <li><a href="#sec-3">About</a></li>  
+                            <div class="dropdown">                                        
+                                <li><a href="#" onclick="toggleDropdown()" class="dropbtn">Kitchen Activities</a></li> 
+                                <div id="dropdownContent" class="dropdown-content">
+                                    <a href="cooking.html" data-activity="Cooking">Cooking</a>
+                                    <a href="purchase.html" data-activity="Purchase Items">Purchase</a>                                    
+                                  </div>
+                                </div>
+                              
+                            <li><a href="billpayment.html">Bill Payments</a></li>
+                            <li><a href="help.html">Contact us</a></li>
+                        </ul>
+                    </ul>
+                </div>
+            </div>
+            </nav>
+        </div>
+    </header>
+
+
+    <section class="sec-1">
+        <div class="container">
+            <div class="col6">
+                <br><br><br><br><br>
+                <h1 class="heading">"The only way to do great work is to love what you do."</h1>
+                <p></p>
+                <br><br><br><br><br><br><br><br><br><br><br><br><br><br> <br><br><br><br><br> 
+            </div>
+            
+    <!--<section class="sec-2">
+	    <div class="container">
+            <img src="image/task.png" class="task-img">
+        </div>
+    </section>-->
+            <!--<div class="col6">
+               
+            </div>
+            <div class="clearfix"></div>-->
+        </div>
+    </section>
+
+   
+    <section class="sec-3" id="sec-3">
+        <br><br>
+        <div class="container">
+            <h2 class="heading-3">About us</h2>
+            <img src="people.jpg" style="float:left;width: 50px; height: 35px;margin-right: 10px;">
+            <div class="clearfix"></div>
+            <br>
+            <div class="col6">
+                <p class="p3">Welcome to our Linelister! We are dedicated to helping you stay organized and productive.Our team of developers is passionate about creating intuitive tools to simplify your life.Feel free to explore our website and start managing your tasks effectively!
+                </p>
+                <br><br>
+                <button class="btn-r" id="redirectButton">Read More</button>
+            </div>
+              
+            <div class="clearfix"></div>
+        </div>
+    </section><br><br>
+
+
+    <footer class="footer-distributed">
+
+    <div class="footer-right">
+
+    <a href="#"><i class="fa fa-facebook"></i></a>
+    <a href="#"><i class="fa fa-twitter"></i></a>
+    <a href="#"><i class="fa fa-linkedin"></i></a>
+    <a href="#"><i class="fa fa-github"></i></a>
+
+    </div>
+    
+    <div class="footer-left">
+    <p class="footer-links">
+    <a class="link-1" href="#">Home</a>
+    <a href="#">Blog</a>
+    <a href="#">Activity</a>
+    <a href="aboutus.html">About</a>
+    <a href="#">Contact</a>
+    </p>
+    <p>LineLister © 2024</p>
+    </div>
+
+    </footer>
+<script src="script.js"></script>
+</body>
+</html>

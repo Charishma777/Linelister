@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to Our Website</h1>
+        <div id="registerForm">
+            <h2>Register</h2>
+            EmailId/username<input type="text" id="newUsername" placeholder="New Username/New EmailId" title="Please enter valid username">
+            Password<input type="password" id="newPassword" placeholder="New Password" title="Password should not be less than 6 characters length">
+            Gender: <input type="radio" name="gen">Male
+               <input type="radio" name="gen">Female
+               <input type="radio" name="gen">Other<br><br>
+            City: <select>
+                <option>Select city</option>
+                <option>Visakhapatnam</option>
+                <option>Vizianagaram</option>
+                <option>Srikakulam</option>
+            </select><br><br>
+             Country: <select>
+                <option>Select country</option>
+                <option>India</option>
+                <option>United States</option>
+                <option>China</option>
+            </select><br><br>
+            Phone Number:<input type="number" id="newPhonenumber" placeholder="Your Phone number" title="Please enter 10 digit number">
+            <button onclick="register()">Register</button>
+            <p id="registerMessage"></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
